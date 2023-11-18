@@ -1,5 +1,5 @@
 const accessKey  = "-OIs6964caZdH3SxlARdGnTw2Qy6XRop6y8De1N5uVc";
-let page =  2;
+let page =  1;
 let defaultText = "cat";
 
 function fetchApi(inputData){
@@ -9,9 +9,7 @@ function fetchApi(inputData){
 
 
 function displayImage(results){
-    console.log(results)
     let html = results.map((image) => {
-        console.log(image);
         return `<div class="image">
                 <img src=${image.urls.regular} alt="">
                 <div class="des">
@@ -32,3 +30,11 @@ document.getElementsByClassName('form')[0].addEventListener('submit' , (e) => {
     fetchApi(inputData);
 })
 
+
+
+document.getElementsByClassName('show-more')[0].addEventListener('click'  , () => {
+    // console.log('first')
+
+    page++;
+    fetchApi(defaultText);
+})
