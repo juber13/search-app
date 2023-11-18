@@ -24,11 +24,13 @@ main{
 .images{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem;
 }
 
 .image{
-    width: 250px;
+    width: 280px;
     height: 350px;
     border: 2px solid #ddd;
     font-size: 15px;
@@ -45,6 +47,7 @@ main{
 .image:nth-child(odd){
     filter: blur(2px);
 }
+
 .image img{
     width: 100%;
     transition: all 0.4s ease;
@@ -55,6 +58,10 @@ main{
 .image:hover img{
     /* width: 100%; */
     transform: scale(1.9);
+    filter: blur(0px);
+}
+
+.image:nth-child(odd):hover{
     filter: blur(0px);
 }
 
@@ -78,4 +85,5 @@ input{
     font-size: small;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
