@@ -21,7 +21,7 @@ main{
     align-items: center;    
 }
 
-.images{
+.images , .parent-image{
     display: flex;
     flex-wrap: wrap;
     align-items: center;

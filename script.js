@@ -17,8 +17,11 @@ function displayImage(results){
                  </div>
                </div>`
     }).join("")
-   
-    document.getElementsByClassName('images')[0].innerHTML = html;
+
+    let image =  document.createElement('div');
+    image.className = "parent-image"
+    image.innerHTML = html;
+    document.getElementsByClassName('images')[0].append(image);
 }
 
 
@@ -34,7 +37,6 @@ document.getElementsByClassName('form')[0].addEventListener('submit' , (e) => {
 
 document.getElementsByClassName('show-more')[0].addEventListener('click'  , () => {
     // console.log('first')
-
     page++;
     fetchApi(defaultText);
 })
